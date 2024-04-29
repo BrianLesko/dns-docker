@@ -1,13 +1,10 @@
 #!/bin/bash
 
 # Build Docker image
-docker build -t dns .
+#docker build -t dns .
 
-# Docker run 
-docker run -d --name dns \
-  -v $(pwd)/config:/etc/bind \
-  -v $(pwd)/cache:/var/cache/bind \
-  -v $(pwd)/records:/var/lib/bind \
-  -p 53:53/tcp -p 53:53/udp \
-  ubuntu/bind9:latest
+#run and start the docker image for the first time
+docker run --name dns -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN -v "$(pwd)/dnsmasq.conf:/etc/dnsmasq.conf" strm/dnsmasq
 
+# run the docker image after the fact
+#docker run dns

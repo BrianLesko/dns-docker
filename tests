@@ -1,0 +1,6 @@
+# Test this in the terminal
+nslookup <iphone> 127.0.0.1
+
+# Run an app with --server.address 0.0.0.0 --server.port 8501
+# then test accessing it with your assigned name
+http://mac:8501

@@ -6,3 +6,4 @@ Click Network.
 Select your network interface (e.g., Wi-Fi).
 Click Advanced and then the DNS tab.
 Click + to add 127.0.0.1 as your DNS server.
+
