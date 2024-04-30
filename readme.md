@@ -17,52 +17,29 @@ This code uses the following libraries:
 &nbsp;
 
 ## Usage
-1. clone this repository
+1. Install docker desktop or the docker daemon, depending on your host computer OS.
+2. clone this repository
 ```
-git clone https://github.com/BrianLesko/dualsense-car-control
+git clone https://github.com/BrianLesko/dns-docker/tree/main
 ```
-2. The base station and robot computers must be on the same network. Set up each device with a static IP
-2. Change the robot IP in 'app.py' and 'car.py' you can also change the port which is '12345'
-3. Change the PS5 remote vendorID and productID in 'app.py'
-4. Plug the arduino into the robot
-5. Run the arduino sketch.ino file on your arduino
-6. Run the car.py file on your robot 
+3. Open docker desktop or start the docker daemon.
+4. run the start script from your terminal
 ```
-python car.py
+./start.sh
 ```
-7. plug the PS5 remote into the base station
-8. run the streamlit app with the following command in your base station terminal
-```
-streamlit run app.py
-```
-
-This will start the local Streamlit server, and you can access the interface by opening a web browser and navigating to `http://localhost:8501`.
+This will start the dns server on your computer, make sure firewall rules allow TCP and UDP traffic on port 53. 
+5. Find your host IP, make it static, and add this IP to your router settings so all the computers on your network will be able to use the DNS server.
 
 &nbsp;
 
-## Repository Structure
-```
-repository/
-├── app.py # The base station UI to send the Internet commands to the robot
-├── customize_gui # class for adding gui elements
-├── dualsense.py # The class used to decode received bytes from the wired controller
-├── ethernet.py # a helper class for sending Internet IP communciation
-├── car.py # Recieves the internet commands and relays them to the arduino
-├── sketch.ino # the arduino code to control the motors
-├── requirements.txt # the python packages needed to run locally
-├── .gitignore # includes the local virtual environment named my_env
-└── docs/
-    └── preview.png # preview photo for Github
-```
+## About
 
-&nbsp;
+I started writing code in college at Ohio State for robotics and engineering purposes. After getting my masters in mechanical engineering I became a robotics engineer in Cleveland. 
 
-## Topics 
-```
-Python | Low Code UI | Mobile robot | Internet IP 
-HIDapi | decode bytes | PS5 | Sony | Dualsense | external device | communication 
-Mechanical and Robotics engineer
-```
+I write this code today to aid in developing enterprise level software for resource planning, yet this code can also be useful for robotics deployment and system management. 
+
+Brian Lesko - Robotics automation engineer
+
 &nbsp;
 
 <hr>
