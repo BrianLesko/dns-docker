@@ -1,7 +1,7 @@
 
 # Domain Name System (DNS) 
 
-A domain name system is useful for deploying production level web applications and code to your local network. It lets users access your web application, data, or service app through a domain name rather than an ip address. Intended for development of 
+A domain name system is useful for deploying production level web applications and code to your local network or globally to the web. Implemented here for local purposes. A DNS server lets users access web applications such as employee resources through a domain name rather than an ip address.
 
 &nbsp;
 
@@ -12,18 +12,9 @@ A domain name system is useful for deploying production level web applications a
 ## Software Dependencies
 
 This code uses the following libraries:
-- `streamlit`: for building the user interface.
-- `numpy`: for creating arrays.
-- `matplotlib`: for plotting the stepper motor visualization
-- `hidapi`: for accessing usb connections on the host device
+- `docker`: for deploying the DNS server in its self contained environment
 
 &nbsp;
-
-## Hardware Dependencies
-1. A base station computer
-2. A second computer for the robot
-3. A PWM capable arduino + cable + servo motors and BLDC Motor controller
-4. A PS5 remote + cable
 
 ## Usage
 1. clone this repository
