@@ -1,7 +1,7 @@
 
 # Domain Name System (DNS) 
 
-A domain name system is useful for deploying production level web applications and code to your local network. It lets users access your web application, data, or service app through a domain name rather than an ip address. Intended for development of 
+A domain name system is useful for deploying production level web applications and code. It lets users access your web application, data, or service app through a domain name rather than an ip address. Intended for development of 
 
 &nbsp;
 
